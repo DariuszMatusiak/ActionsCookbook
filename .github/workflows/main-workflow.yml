@@ -1,0 +1,13 @@
+name: Self-hosted
+on: [workflow_dispatch]
+jobs:
+  main:
+    runs-on: self-hosted
+    steps:
+      - name: output environment
+        shell: bash
+        run: | 
+          echo "Nazwa runnera: '${{ runner.name }}'."
+          echo "System op runnera '${{ runner.os }}'."
+          echo "Pakiet Linux dla runnera na serwerze '${{ runner.arch }}'."
+          
